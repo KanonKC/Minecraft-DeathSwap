@@ -1,9 +1,7 @@
 import "package:objd/core.dart";
 import './main.dart';
 import './load.dart';
-import './module/swap.dart';
-import './module/start.dart';
-
+import './module/game.dart';
 
 void main(List<String> args){
 	createProject(
@@ -32,7 +30,12 @@ class CustomWidget extends Widget {
             ),
             files: [
               File("swap",child: Swap()),
-              File("start",child: Start())
+              File("start",child: Start()),
+              File("terminate",child: Terminate()),
+              File("tstart",child: TimeStart()),
+              File("tstop",child: TimeStop()),
+              File("countdown",child: Countdown()),
+              File("checkwin",child: CheckWinner()),
             ],        
             modules: [
             ]

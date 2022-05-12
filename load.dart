@@ -5,7 +5,13 @@ class LoadFile extends Widget {
     
     @override
     generate(Context context) {
-        // var PlayerMana = Scoreboard("mana");
-        return For.of([]);
+        return For.of([
+            Team.add(
+                "ingame",
+                display: TextComponent("In-Game"),
+                friendlyFire: false,
+                collision: ModifyTeam.never
+            )
+        ]);
     }
 }
